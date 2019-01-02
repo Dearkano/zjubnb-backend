@@ -1,0 +1,18 @@
+export default {
+  'menu.home': '首页',
+  'menu.dashboard': '业务监控',
+  'menu.dashboard.analysis': '分析页',
+  'menu.dashboard.monitor': '监控页',
+  'menu.dashboard.workplace': '工作台',
+  'menu.form': '新增',
+  'menu.form.basicform': '新增业务',
+  'menu.list': '订单查询',
+  'menu.list.basiclist': '订单列表',
+  'menu.profile': '详情页',
+  'menu.profile.basic': '订单详情',
+  'menu.account': '账户',
+  'menu.account.center': '个人中心',
+  'menu.account.settings': '个人设置',
+  'menu.account.trigger': '触发报错',
+  'menu.account.logout': '退出登录',
+};
