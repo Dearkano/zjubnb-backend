@@ -320,7 +320,12 @@ const getActivities = [
 function getFakeCaptcha(req, res) {
   return res.json('captcha-xxx');
 }
-
+const testData = [
+  {
+    name: 'abc',
+    id: 13
+  }
+]
 export default {
   'GET /api/project/notice': getNotice,
   'GET /api/activities': getActivities,
@@ -333,4 +338,5 @@ export default {
   'GET /api/fake_list': getFakeList,
   'POST /api/fake_list': postFakeList,
   'GET /api/captcha': getFakeCaptcha,
+  'GET /api/testdata' : testData
 };
