@@ -123,7 +123,7 @@ class BasicLayout extends React.PureComponent {
       defaultMessage: currRouterData.name,
     });
 
-    return `${pageName} - Ant Design Pro`;
+    return `${pageName} - ZJUBNB`;
   };
 
   getLayoutStyle = () => {
