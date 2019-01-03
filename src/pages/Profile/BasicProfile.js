@@ -4,7 +4,9 @@ import { Card, Badge, Table, Divider } from 'antd';
 import DescriptionList from '@/components/DescriptionList';
 import PageHeaderWrapper from '@/components/PageHeaderWrapper';
 import styles from './BasicProfile.less';
-
+import r1 from '@/assets/report1.png'
+import r2 from '@/assets/report2.png'
+import r3 from '@/assets/report3.png'
 const { Description } = DescriptionList;
 
 const progressColumns = [
@@ -142,40 +144,26 @@ class BasicProfile extends Component {
       },
     ];
     return (
-      <PageHeaderWrapper title="基础详情页">
+      <PageHeaderWrapper title="Report Detail">
         <Card bordered={false}>
-          <DescriptionList size="large" title="退款申请" style={{ marginBottom: 32 }}>
-            <Description term="取货单号">1000000000</Description>
-            <Description term="状态">已取货</Description>
-            <Description term="销售单号">1234123421</Description>
-            <Description term="子订单">3214321432</Description>
+          <DescriptionList size="large" title="Report Header" style={{ marginBottom: 32 }}>
+            <Description term="Report Id">1000000000</Description>
+            <Description term="Status">Finished</Description>
+            <Description term="Client">Thomas Lee</Description>
+            <Description term="Company">Sighter Ink</Description>
           </DescriptionList>
           <Divider style={{ marginBottom: 32 }} />
-          <DescriptionList size="large" title="用户信息" style={{ marginBottom: 32 }}>
-            <Description term="用户姓名">付小小</Description>
-            <Description term="联系电话">18100000000</Description>
-            <Description term="常用快递">菜鸟仓储</Description>
-            <Description term="取货地址">浙江省杭州市西湖区万塘路18号</Description>
-            <Description term="备注">无</Description>
+          <DescriptionList size="large" title="House Information" style={{ marginBottom: 32 }}>
+            <Description term="Owner">Thomas Lee</Description>
+            <Description term="Mobile Phone">18100000000</Description>
+            <Description term="City">New York City</Description>
+            <Description term="Address">71, 101 st, Manhatton</Description>
+            <Description term="Remark">null</Description>
           </DescriptionList>
           <Divider style={{ marginBottom: 32 }} />
-          <div className={styles.title}>退货商品</div>
-          <Table
-            style={{ marginBottom: 24 }}
-            pagination={false}
-            loading={loading}
-            dataSource={goodsData}
-            columns={goodsColumns}
-            rowKey="id"
-          />
-          <div className={styles.title}>退货进度</div>
-          <Table
-            style={{ marginBottom: 16 }}
-            pagination={false}
-            loading={loading}
-            dataSource={basicProgress}
-            columns={progressColumns}
-          />
+          <img src={r1}/>
+          <img src={r2}/>
+          <img src={r3}/>
         </Card>
       </PageHeaderWrapper>
     );

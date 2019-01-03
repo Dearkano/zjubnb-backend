@@ -122,7 +122,7 @@ class Center extends PureComponent {
     return (
       <GridContent className={styles.userCenter}>
         <Row gutter={24}>
-          <Col lg={7} md={24}>
+          <Col lg={24} md={24}>
             <Card bordered={false} style={{ marginBottom: 24 }} loading={currentUserLoading}>
               {currentUser && Object.keys(currentUser).length ? (
                 <div>
@@ -193,18 +193,6 @@ class Center extends PureComponent {
               ) : (
                 'loading...'
               )}
-            </Card>
-          </Col>
-          <Col lg={17} md={24}>
-            <Card
-              className={styles.tabsCard}
-              bordered={false}
-              tabList={operationTabList}
-              activeTabKey={location.pathname.replace(`${match.path}/`, '')}
-              onTabChange={this.onTabChange}
-              loading={listLoading}
-            >
-              {children}
             </Card>
           </Col>
         </Row>

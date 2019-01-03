@@ -157,7 +157,7 @@ const getNotice = [
   {
     id: 'xxx1',
     title: titles[0],
-    logo: avatars[0],
+    logo: avatars[6],
     description: '',
     updatedAt: new Date(),
     member: 'Facebook',
