@@ -149,11 +149,12 @@ class BasicList extends PureComponent {
     const extraContent = (
       <div className={styles.extraContent}>
         <RadioGroup defaultValue="all">
-          <RadioButton value="all">全部</RadioButton>
-          <RadioButton value="progress">进行中</RadioButton>
-          <RadioButton value="waiting">等待中</RadioButton>
+          <RadioButton value="all">All</RadioButton>
+          <RadioButton value="backlog">Backlog</RadioButton>
+          <RadioButton value="progress">Progess</RadioButton>
+          <RadioButton value="waiting">Finished</RadioButton>
         </RadioGroup>
-        <Search className={styles.extraContentSearch} placeholder="请输入" onSearch={() => ({})} />
+        <Search className={styles.extraContentSearch} placeholder="Please input" onSearch={() => ({})} />
       </div>
     );
 
@@ -217,7 +218,7 @@ class BasicList extends PureComponent {
             {getFieldDecorator('title', {
               rules: [{ required: true, message: '请输入任务名称' }],
               initialValue: current.title,
-            })(<Input placeholder="请输入" />)}
+            })(<Input placeholder="Please input" />)}
           </FormItem>
           <FormItem label="开始时间" {...this.formLayout}>
             {getFieldDecorator('createdAt', {
@@ -258,13 +259,13 @@ class BasicList extends PureComponent {
           <Card bordered={false}>
             <Row>
               <Col sm={8} xs={24}>
-                <Info title="我的待办" value="8个任务" bordered />
+                <Info title="Backlog" value="8 tasks" bordered />
               </Col>
               <Col sm={8} xs={24}>
-                <Info title="本周任务平均处理时间" value="32分钟" bordered />
+                <Info title="Average cost per task" value="32 min" bordered />
               </Col>
               <Col sm={8} xs={24}>
-                <Info title="本周完成任务数" value="24个任务" />
+                <Info title="Overall finished tasks in a week" value="24 tasks" />
               </Col>
             </Row>
           </Card>
@@ -272,24 +273,11 @@ class BasicList extends PureComponent {
           <Card
             className={styles.listCard}
             bordered={false}
-            title="标准列表"
+            title="Order List"
             style={{ marginTop: 24 }}
             bodyStyle={{ padding: '0 32px 40px 32px' }}
             extra={extraContent}
           >
-            <Button
-              type="dashed"
-              style={{ width: '100%', marginBottom: 8 }}
-              icon="plus"
-              onClick={this.showModal}
-              ref={component => {
-                /* eslint-disable */
-                this.addBtn = findDOMNode(component);
-                /* eslint-enable */
-              }}
-            >
-              添加
-            </Button>
             <List
               size="large"
               rowKey="id"

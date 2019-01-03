@@ -14,10 +14,10 @@ app.use(createLoading());
   app.use(plugin);
 });
 
-app.model({ namespace: 'global', ...(require('/Users/zhang/Documents/my-project/src/models/global.js').default) });
-app.model({ namespace: 'list', ...(require('/Users/zhang/Documents/my-project/src/models/list.js').default) });
-app.model({ namespace: 'login', ...(require('/Users/zhang/Documents/my-project/src/models/login.js').default) });
-app.model({ namespace: 'menu', ...(require('/Users/zhang/Documents/my-project/src/models/menu.js').default) });
-app.model({ namespace: 'project', ...(require('/Users/zhang/Documents/my-project/src/models/project.js').default) });
-app.model({ namespace: 'setting', ...(require('/Users/zhang/Documents/my-project/src/models/setting.js').default) });
-app.model({ namespace: 'user', ...(require('/Users/zhang/Documents/my-project/src/models/user.js').default) });
+app.model({ namespace: 'global', ...(require('/Users/zhang/Documents/zjubnb-backend/src/models/global.js').default) });
+app.model({ namespace: 'list', ...(require('/Users/zhang/Documents/zjubnb-backend/src/models/list.js').default) });
+app.model({ namespace: 'login', ...(require('/Users/zhang/Documents/zjubnb-backend/src/models/login.js').default) });
+app.model({ namespace: 'menu', ...(require('/Users/zhang/Documents/zjubnb-backend/src/models/menu.js').default) });
+app.model({ namespace: 'project', ...(require('/Users/zhang/Documents/zjubnb-backend/src/models/project.js').default) });
+app.model({ namespace: 'setting', ...(require('/Users/zhang/Documents/zjubnb-backend/src/models/setting.js').default) });
+app.model({ namespace: 'user', ...(require('/Users/zhang/Documents/zjubnb-backend/src/models/user.js').default) });

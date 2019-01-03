@@ -13,5 +13,6 @@ export { default as TagCloud } from './TagCloud';
 export { default as TimelineChart } from './TimelineChart';
 
 declare const yuan: (value: number | string) => string;
+declare const dollar: (value: number | string) => string;
 
-export { yuan };
+export { yuan, dollar };

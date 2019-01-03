@@ -5,7 +5,7 @@ import styles from './Analysis.less';
 import { ChartCard, MiniArea, MiniBar, MiniProgress, Field } from '@/components/Charts';
 import Trend from '@/components/Trend';
 import numeral from 'numeral';
-import Yuan from '@/utils/Yuan';
+import Dollar from '@/utils/Dollar';
 
 const topColResponsiveProps = {
   xs: 24,
@@ -30,11 +30,11 @@ const IntroduceRow = memo(({ loading, visitData }) => (
           </Tooltip>
         }
         loading={loading}
-        total={() => <Yuan>126560</Yuan>}
+        total={() => <Dollar>126560</Dollar>}
         footer={
           <Field
             label={<FormattedMessage id="app.analysis.day-sales" defaultMessage="Daily Sales" />}
-            value={`￥${numeral(12423).format('0,0')}`}
+            value={`$${numeral(12423).format('0,0')}`}
           />
         }
         contentHeight={46}

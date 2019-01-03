@@ -59,7 +59,7 @@ const extra = (
     </Col>
     <Col xs={24} sm={12}>
       <div className={styles.textSecondary}>订单金额</div>
-      <div className={styles.heading}>¥ 568.08</div>
+      <div className={styles.heading}>$ 568.08</div>
     </Col>
   </Row>
 );

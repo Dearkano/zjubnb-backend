@@ -1,5 +1,5 @@
 export default {
-  'app.analysis.test': 'Gongzhuan No.{no} shop',
+  'app.analysis.test': 'Manhutton No.{no} shop',
   'app.analysis.introduce': 'Introduce',
   'app.analysis.total-sales': 'Total Sales',
   'app.analysis.day-sales': 'Daily Sales',

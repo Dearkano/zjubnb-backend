@@ -61,7 +61,7 @@ class Monitor extends PureComponent {
                         defaultMessage="Total transactions today"
                       />
                     }
-                    suffix="元"
+                    suffix=""
                     total={numeral(124543233).format('0,0')}
                   />
                 </Col>
@@ -95,7 +95,7 @@ class Monitor extends PureComponent {
                         defaultMessage="Total transactions per second"
                       />
                     }
-                    suffix="元"
+                    suffix=""
                     total={numeral(234).format('0,0')}
                   />
                 </Col>
@@ -205,15 +205,21 @@ class Monitor extends PureComponent {
             <Card
               title={
                 <FormattedMessage
-                  id="app.monitor.popular-searches"
-                  defaultMessage="Popular Searches"
+                  id="app.monitor.popular-surplus"
+                  defaultMessage="Popular Surplus"
                 />
               }
               loading={loading}
               bordered={false}
               bodyStyle={{ overflow: 'hidden' }}
             >
-              <TagCloud data={tags} height={161} />
+              <WaterWave
+                height={161}
+                title={
+                  <FormattedMessage id="app.monitor.fund-surplus" defaultMessage="Fund Surplus" />
+                }
+                percent={34}
+              />
             </Card>
           </Col>
           <Col xl={6} lg={12} sm={24} xs={24} style={{ marginBottom: 24 }}>

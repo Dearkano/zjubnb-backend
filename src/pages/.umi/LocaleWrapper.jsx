@@ -23,7 +23,7 @@ defaultAntd = defaultAntd.default || defaultAntd;
 const localeInfo = {
   'en-US': {
     messages: {
-      ...require('/Users/zhang/Documents/my-project/src/locales/en-US.js').default,
+      ...require('/Users/zhang/Documents/zjubnb-backend/src/locales/en-US.js').default,
     },
     locale: 'en-US',
     antd: require('antd/lib/locale-provider/en_US'),
@@ -32,7 +32,7 @@ const localeInfo = {
   },
   'pt-BR': {
     messages: {
-      ...require('/Users/zhang/Documents/my-project/src/locales/pt-BR.js').default,
+      ...require('/Users/zhang/Documents/zjubnb-backend/src/locales/pt-BR.js').default,
     },
     locale: 'pt-BR',
     antd: require('antd/lib/locale-provider/pt_BR'),
@@ -41,7 +41,7 @@ const localeInfo = {
   },
   'zh-CN': {
     messages: {
-      ...require('/Users/zhang/Documents/my-project/src/locales/zh-CN.js').default,
+      ...require('/Users/zhang/Documents/zjubnb-backend/src/locales/zh-CN.js').default,
     },
     locale: 'zh-CN',
     antd: require('antd/lib/locale-provider/zh_CN'),
@@ -50,7 +50,7 @@ const localeInfo = {
   },
   'zh-TW': {
     messages: {
-      ...require('/Users/zhang/Documents/my-project/src/locales/zh-TW.js').default,
+      ...require('/Users/zhang/Documents/zjubnb-backend/src/locales/zh-TW.js').default,
     },
     locale: 'zh-TW',
     antd: require('antd/lib/locale-provider/zh_TW'),

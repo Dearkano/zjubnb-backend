@@ -33,12 +33,7 @@ export default [
             path: '/dashboard/monitor',
             name: 'monitor',
             component: './Dashboard/Monitor',
-          },
-          {
-            path: '/dashboard/workplace',
-            name: 'workplace',
-            component: './Dashboard/Workplace',
-          },
+          }
         ],
       },
       // forms

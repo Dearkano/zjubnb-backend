@@ -1,4 +1,11 @@
 {
+  "100000": [
+    {
+      "province": "New York State",
+      "name": "New York City",
+      "id": "100001"
+    }
+  ],
   "110000": [
     {
       "province": "北京市",

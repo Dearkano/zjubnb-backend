@@ -136,6 +136,7 @@ class BaseView extends Component {
               })(
                 <Select style={{ maxWidth: 220 }}>
                   <Option value="China">中国</Option>
+                  <Option value="United State">United State</Option>
                 </Select>
               )}
             </FormItem>
