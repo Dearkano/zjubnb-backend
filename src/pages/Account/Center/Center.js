@@ -148,7 +148,7 @@ class Center extends PureComponent {
                   </div>
                   <Divider dashed />
                   <div className={styles.tags}>
-                    <div className={styles.tagsTitle}>标签</div>
+                    <div className={styles.tagsTitle}>Service</div>
                     {currentUser.tags.concat(newTags).map(item => (
                       <Tag key={item.key}>{item.label}</Tag>
                     ))}
@@ -175,7 +175,7 @@ class Center extends PureComponent {
                   </div>
                   <Divider style={{ marginTop: 16 }} dashed />
                   <div className={styles.team}>
-                    <div className={styles.teamTitle}>团队</div>
+                    <div className={styles.teamTitle}>Partner</div>
                     <Spin spinning={projectLoading}>
                       <Row gutter={36}>
                         {notice.map(item => (
