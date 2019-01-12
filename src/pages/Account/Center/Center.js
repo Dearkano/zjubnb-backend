@@ -11,28 +11,26 @@ import styles from './Center.less';
   currentUser: user.currentUser,
   currentUserLoading: loading.effects['user/fetchCurrent'],
   project,
-  projectLoading: loading.effects['project/fetchNotice'],
+  projectLoading: loading.effects['project/fetchNotice']
 }))
 class Center extends PureComponent {
   state = {
     newTags: [],
     inputVisible: false,
-    inputValue: '',
+    inputValue: ''
   };
 
   componentDidMount() {
-    const { dispatch } = this.props;
+    const { dispatch, currentUser } = this.props;
     dispatch({
-      type: 'user/fetchCurrent',
+      type: 'user/fetchCurrent'
     });
     dispatch({
       type: 'list/fetch',
-      payload: {
-        count: 8,
-      },
+      payload: currentUser.company_id || ''
     });
     dispatch({
-      type: 'project/fetchNotice',
+      type: 'project/fetchNotice'
     });
   }
 
@@ -69,13 +67,19 @@ class Center extends PureComponent {
     const { state } = this;
     const { inputValue } = state;
     let { newTags } = state;
-    if (inputValue && newTags.filter(tag => tag.label === inputValue).length === 0) {
-      newTags = [...newTags, { key: `new-${newTags.length}`, label: inputValue }];
+    if (
+      inputValue &&
+      newTags.filter(tag => tag.label === inputValue).length === 0
+    ) {
+      newTags = [
+        ...newTags,
+        { key: `new-${newTags.length}`, label: inputValue }
+      ];
     }
     this.setState({
       newTags,
       inputVisible: false,
-      inputValue: '',
+      inputValue: ''
     });
   };
 
@@ -89,7 +93,7 @@ class Center extends PureComponent {
       projectLoading,
       match,
       location,
-      children,
+      children
     } = this.props;
 
     const operationTabList = [
@@ -99,7 +103,7 @@ class Center extends PureComponent {
           <span>
             文章 <span style={{ fontSize: 14 }}>(8)</span>
           </span>
-        ),
+        )
       },
       {
         key: 'applications',
@@ -107,7 +111,7 @@ class Center extends PureComponent {
           <span>
             应用 <span style={{ fontSize: 14 }}>(8)</span>
           </span>
-        ),
+        )
       },
       {
         key: 'projects',
@@ -115,15 +119,19 @@ class Center extends PureComponent {
           <span>
             项目 <span style={{ fontSize: 14 }}>(8)</span>
           </span>
-        ),
-      },
+        )
+      }
     ];
 
     return (
       <GridContent className={styles.userCenter}>
         <Row gutter={24}>
           <Col lg={24} md={24}>
-            <Card bordered={false} style={{ marginBottom: 24 }} loading={currentUserLoading}>
+            <Card
+              bordered={false}
+              style={{ marginBottom: 24 }}
+              loading={currentUserLoading}
+            >
               {currentUser && Object.keys(currentUser).length ? (
                 <div>
                   <div className={styles.avatarHolder}>

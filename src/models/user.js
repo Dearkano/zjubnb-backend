@@ -1,11 +1,12 @@
 import { query as queryUsers, queryCurrent } from '@/services/user';
+import { getInfo } from '@/services/api';
 
 export default {
   namespace: 'user',
 
   state: {
     list: [],
-    currentUser: {},
+    currentUser: {}
   },
 
   effects: {
@@ -13,29 +14,37 @@ export default {
       const response = yield call(queryUsers);
       yield put({
         type: 'save',
-        payload: response,
+        payload: response
       });
     },
     *fetchCurrent(_, { call, put }) {
       const response = yield call(queryCurrent);
+      const info = yield call(getInfo);
+      const data = {
+        ...response,
+        ...info.data.company_information,
+        name: info.data.company_information.company_name,
+        avatar: info.data.company_information.head_image
+      };
+      console.log(data);
       yield put({
         type: 'saveCurrentUser',
-        payload: response,
+        payload: data
       });
-    },
+    }
   },
 
   reducers: {
     save(state, action) {
       return {
         ...state,
-        list: action.payload,
+        list: action.payload
       };
     },
     saveCurrentUser(state, action) {
       return {
         ...state,
-        currentUser: action.payload || {},
+        currentUser: action.payload || {}
       };
     },
     changeNotifyCount(state, action) {
@@ -44,9 +53,9 @@ export default {
         currentUser: {
           ...state.currentUser,
           notifyCount: action.payload.totalCount,
-          unreadCount: action.payload.unreadCount,
-        },
+          unreadCount: action.payload.unreadCount
+        }
       };
-    },
-  },
+    }
+  }
 };
